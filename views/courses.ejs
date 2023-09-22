@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>courses</h1>
+    <input type="text">
+    <p> username: <%= data.username %> </p>
+    <div>
+        <% for( let index = 0; index < data.allCourses.length; index++ ) { %>
+        <ul>
+            <li><%= data.allCourses[index] %></li>
+        </ul>
+        <% } %>
+    </div>
+    <div>
+        <h3><%= data.rand %></h3>
+        <% if (data.rand<5) { %>
+          <h3>Data is less than five</h3>
+        <% } else{%>
+            <h3>Data is greater than five</h3>
+            <% } %>
+    </div>
+
+    <div>
+        <h3>second way</h3>
+        <h3> <%= data.rand %></h3>
+        <h4><%= data.rand<5? 'data is less than five':'data is Greater than five' %></h4>
+    </div>
+
+  
+  
+
+</body>
+</html>

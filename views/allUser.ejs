@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+ <%-include('partials/head') %>
+ <link rel="stylesheet" href="css/allUser.css">
+ <style>
+   div{
+     display: grid;
+     grid-template-columns: auto auto;
+    }
+    </style>
+<body>
+  <%-include('partials/navBar') %>
+    <% for( let index = 0; index < dataList.length; index++ ) { %>
+      <h3><%= dataList[index].name %></h3>
+      <a href="/<%= dataList[index].username %>"><button class="btn">view User</button></a>
+    <% } %>
+
+   <h3>where is this .username coming from or targeting????</h3>
+
+    <div>
+      <% dataList.forEach(el => { %>
+        <h2>Name: <%= el.name %></h2>
+        <hr>
+        <h2>name: <%= el.username %></h2>
+        <hr>
+        <h2>Name: <%= el.email %></h2>
+      <% }) %>
+    </div>
+    
+    <div>
+      <h3></h3>
+    </div>
+   
+    <script src="js/allUser.js"></script>
+</body>
+</html>
